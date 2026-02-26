@@ -33,7 +33,7 @@ var svc = new Service({
   nodeOptions: ['--max_old_space_size=2048'],
   env: [
     { name: 'NODE_ENV', value: 'production' },
-    { name: 'PORT', value: '3000' },
+    { name: 'PORT', value: '3010' },
     { name: 'VITE_BASE_PATH', value: '/apps/email-builder/' },
   ],
   workingDirectory: path.dirname(servicePath),
@@ -65,7 +65,7 @@ svc.on('invalidinstallation', function () {
 
 svc.on('start', function () {
   console.log('Service started successfully!');
-  console.log('EmailBuilder.js is running on port 3000');
+  console.log('EmailBuilder.js is running on port 3010');
   console.log('App accessible via: https://infra.aap.cornell.com/apps/email-builder');
   console.log('Check Windows Event Viewer > Application for logs (source: email-builder-js-service)');
 });

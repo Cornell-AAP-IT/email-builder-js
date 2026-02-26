@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run build:packages -w @usewaypoint/email-builder-project && vite",
-    "build": "npm run build:packages -w @usewaypoint/email-builder-project && vite build",
+    "dev": "npm run build:packages --prefix ../.. && vite",
+    "build": "npm run build:packages --prefix ../.. && vite build",
     "preview": "vite preview",
     "start": "node server/serve.cjs",
     "service:install": "node server/windows-service.cjs",

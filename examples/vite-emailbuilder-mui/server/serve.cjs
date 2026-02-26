@@ -6,7 +6,7 @@
 var express = require("express");
 var path = require("path");
 
-var PORT = parseInt(process.env.PORT || "3000", 10);
+var PORT = parseInt(process.env.PORT || "3010", 10);
 var BASE_PATH = process.env.VITE_BASE_PATH || "/apps/email-builder/";
 var distPath = path.join(__dirname, "..", "dist");
 
