@@ -31,5 +31,14 @@ Copy `.env.example` to `.env` and adjust as needed:
    - `VITE_BASE_PATH=/apps/email-builder/` for `https://cornelurl.com/apps/email-builder`
 2. Build: `npm run build`
 3. Serve the `dist/` folder:
-   - **Node:** `npx serve dist -s -l 3000` (or your port)
-   - **IIS reverse proxy:** Point the proxy to the Node process serving `dist/` on the configured port. Ensure the IIS URL rewrite maps `/apps/email-builder` to the backend.
+   - **Node:** `npm run start` (runs `server/serve.cjs` on port 3000)
+   - **Windows Service:** Run as Administrator: `npm run service:install`
+   - **IIS reverse proxy:** Point the proxy to the Node process (port 3000). Ensure IIS maps `/apps/email-builder` to the backend.
+
+## Windows Service
+
+To run as a Windows service (e.g. behind IIS reverse proxy):
+
+1. Build: `npm run build`
+2. Run as Administrator: `npm run service:install`
+3. Uninstall: `npm run service:uninstall` (as Administrator)
