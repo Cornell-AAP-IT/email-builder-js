@@ -18,17 +18,17 @@ Or from the project root: `npm run dev -w @usewaypoint/vite-emailbuilder`
 
 Copy `.env.example` to `.env` and adjust as needed:
 
-| Variable | Description | Default |
-|----------|-------------|---------|
+| Variable         | Description                                 | Default                |
+| ---------------- | ------------------------------------------- | ---------------------- |
 | `VITE_BASE_PATH` | Base URL path (must start and end with `/`) | `/apps/email-builder/` |
-| `VITE_DEV_PORT` | Dev server and preview port | `5173` |
+| `VITE_DEV_PORT`  | Dev server and preview port                 | `5173`                 |
 
-**Production URL:** `https://cornelurl.com/apps/email-builder` → set `VITE_BASE_PATH=/apps/email-builder/`
+**Production URL:** `https://infra.aap.cornell.com/apps/email-builder` → set `VITE_BASE_PATH=/apps/email-builder/`
 
 ## Production deployment
 
 1. Set environment variables (or use `.env.production`):
-   - `VITE_BASE_PATH=/apps/email-builder/` for `https://cornelurl.com/apps/email-builder`
+   - `VITE_BASE_PATH=/apps/email-builder/` for `https://infra.aap.cornell.com/apps/email-builder`
 2. Build: `npm run build`
 3. Serve the `dist/` folder:
    - **Node:** `npm run start` (runs `server/serve.cjs` on port 3000)
